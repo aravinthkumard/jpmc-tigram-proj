@@ -1,0 +1,9 @@
+Trigrams can be used to mutate text into new, surreal, forms. But what heuristics do we apply to get a reasonable result?
+
+As a boy, one of my treats was go to the shops on a Saturday and spend part of my allowance on books; for a nine-year old, I had quite a collection of Tom Swift and Hardy Boys. Wouldn’t it be great to be able to create more and more of these classic books, to be able to generate a new Tom Swift adventure on demand?
+
+OK, perhaps not. But that won’t stop us trying. I coded up a quick program to generate some swash-buckling scientific adventure on demand. It came up with:
+
+Stylistically, it’s Victor Appleton meets Dylan Thomas. Technically, it’s all done with trigrams.
+
+Trigram analysis is very simple. Look at each set of three adjacent words in a document. Use the first two words of the set as a key, and remember the fact that the third word followed that key. Once you’ve finished, you know the list of individual words that can follow each two word sequence in the document. For example, given the input:
